@@ -1,8 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+
 /**
- * main - Entry point
+ * main: get the last digits of a number
  * Description: 'get the last digits of a number'
  * Return: Always 0.
  */
@@ -10,23 +11,20 @@
 int main(void)
 {
 	int n;
-	int is;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	is = n % 10;
+
+	if ((n % 10) > 5)
 	{
-	if (is > 5)
-	{
-		printf("Last digit of %d is %d and is greater than 5\n", n, is);
+		printf("Last digit of %d is %d and is greater than 5\n", n % 10);
 	}
-	else if (is == 0)
+	else if ((n % 10) < 6 && (n % 10) != 0)
 	{
-		printf("last digit of %d is %d and is 0\n", n, is);
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n % 10);
 	}
 	else
 	{
-		printf("last digit of %d is %d and less than 6 and not 0\n", n, is);
+		printf("Last digit of %d is %d and is 0\n", n % 10);
 	}
 	return (0);
-}
