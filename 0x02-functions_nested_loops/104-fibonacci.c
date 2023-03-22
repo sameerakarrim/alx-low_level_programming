@@ -27,7 +27,7 @@ int main(void)
 		bef = aft - bef;
 	}
 
-	bef1 = (bef / l};
+	bef1 = (bef / l);
 	bef2 = (bef % l);
 	aft1 = (aft / l);
 	aft1 = (aft % l);
